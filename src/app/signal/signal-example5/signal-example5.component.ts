@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, WritableSignal, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
     styleUrl: './signal-example5.component.scss',
     imports: [
         FormsModule,
-        NgFor,
+        CommonModule,
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
@@ -24,8 +24,10 @@ export default class SignalExample5Component {
 
   addTodo(todo: HTMLInputElement): void {
     const item = todo.value;
-    this.updateTodos(item);
-    this.resetAndFocus(todo);
+    if(item.trim()){
+      this.updateTodos(item);
+      this.resetAndFocus(todo);
+    }
   }
 
   updateTodos(todo: string){

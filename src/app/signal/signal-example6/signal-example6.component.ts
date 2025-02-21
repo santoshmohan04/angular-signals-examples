@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, WritableSignal, model, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class SignalExample5Component {
-  username = model('Sonu Sindhu');
+  username = model('Santosh');
 
   // updateUsername(name: string) {
   //   this.username.set(name);

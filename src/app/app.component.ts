@@ -1,6 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
 import {
-  ActivatedRoute,
   NavigationEnd,
   NavigationStart,
   Router,
@@ -9,13 +8,13 @@ import {
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { filter, startWith, tap } from 'rxjs';
-import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [NgIf, RouterModule, HeaderComponent, FooterComponent]
+    imports: [CommonModule, RouterModule, HeaderComponent, FooterComponent]
 }) 
 export class AppComponent {
   router = inject(Router);

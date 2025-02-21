@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -23,7 +23,7 @@ const PRODUCTS: Product[] = [
     selector: 'signal-example13',
     templateUrl: `./signal-example13.component.html`,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [MatButtonModule, NgFor, NgIf],
+    imports: [MatButtonModule, CommonModule],
     styles: [
         `
       ul {

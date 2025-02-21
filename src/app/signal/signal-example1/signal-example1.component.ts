@@ -10,13 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class SignalExample1Component {
-  count = signal<number>(1);
+  count = signal<number>(0);
 
   increaseCount() {
     this.count.update((count) => count + 1);
   }
 
   decreaseCount() {
-    this.count.update((count) => count - 1);
+    this.count.update((count) => count > 0 ? count - 1 : count);
+  }
+
+  resetCount(){
+    this.count.update(() => 0);
   }
 }

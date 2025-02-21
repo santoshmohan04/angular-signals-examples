@@ -1,5 +1,5 @@
-import { NgIf, NgFor, CurrencyPipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, effect, OnInit, signal } from '@angular/core';
+import { CurrencyPipe, CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -11,8 +11,7 @@ import { products } from './products';
     templateUrl: './signal-example10.component.html',
     styleUrl: './signal-example10.component.scss',
     imports: [
-        NgIf,
-        NgFor,
+        CommonModule,
         FormsModule,
         MatButtonModule,
         MatFormFieldModule,
